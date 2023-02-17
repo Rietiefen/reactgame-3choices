@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/reactgame-3choices/static/css/main.073c9b0a.css",
+    "main.js": "/reactgame-3choices/static/js/main.5513d313.js",
+    "static/js/787.28cb0dcd.chunk.js": "/reactgame-3choices/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/reactgame-3choices/index.html",
+    "main.073c9b0a.css.map": "/reactgame-3choices/static/css/main.073c9b0a.css.map",
+    "main.5513d313.js.map": "/reactgame-3choices/static/js/main.5513d313.js.map",
+    "787.28cb0dcd.chunk.js.map": "/reactgame-3choices/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.5513d313.js"
+  ]
+}
