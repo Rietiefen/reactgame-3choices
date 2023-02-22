@@ -5,14 +5,17 @@ const Answer = () => {
     <>
       <h1>3 Choice Quiz</h1>
       <h2>
-        <span></span>
-        <br></br>Which country has the largest population in the world?
+        <span>Question {currentQuestion + 1}</span>
+        <br></br>
+        {questions[currentQuestion].questionText}
       </h2>
-      <ul>
-        <li>India</li>
-        <li>China</li>
-        <li>USA</li>
-      </ul>
+      {questions[currentQuestion].answerOptions.map((answerOption, key) => (
+        <li>
+          key={key}
+          onClick = {() => handleAnswerButtonClick(answerOption.isCorrect)}
+          {answerOption.answerText}
+        </li>
+      ))}
     </>
   );
 };

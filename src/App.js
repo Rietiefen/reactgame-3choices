@@ -19,8 +19,19 @@ function App() {
     (answerOptions = [
       { answerText: `Amanita virosa`, isCorrect: true },
       { answerText: `Shiitake Mushroom`, isCorrect: false },
+      { answerText: `oyster mushroom`, isCorrect: false },
     ]),
   ];
+
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  function handleAnswerButtonClick(isCorrect) {
+    const nextQuestion = currentQuestion + 1;
+
+    if (nextQuestion < questions.length) {
+      setCurrentQuestion(nextQuestion);
+    }
+  }
+
   return (
     <div className="App">
       <Answer />
