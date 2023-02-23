@@ -5,17 +5,19 @@ const Answer = () => {
     <>
       <h1>3 Choice Quiz</h1>
       <h2>
-        <span>Question {currentQuestion + 1}</span>
-        <br></br>
-        {questions[currentQuestion].questionText}
+        <span>Question 
+          {/* {currentQuestion + 1} */}
+          </span>
+        {/* <br></br>
+        {questions[currentQuestion].questionText} */}
       </h2>
-      {questions[currentQuestion].answerOptions.map((answerOption, key) => (
+      {/* {questions[currentQuestion].answerOptions.map((answerOptions, key) => (
         <li>
           key={key}
-          onClick = {() => handleAnswerButtonClick(answerOption.isCorrect)}
-          {answerOption.answerText}
+          onClick = {() => handleAnswerButtonClick(answerOptions.isCorrect)}
+          {answerOptions.answerText}
         </li>
-      ))}
+      ))} */}
     </>
   );
 };
