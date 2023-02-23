@@ -24,17 +24,40 @@ function App() {
   ];
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
+
+  const [score, setScore] = useState(0);
+
   function handleAnswerButtonClick(isCorrect) {
+    if (isCorrect === true) {
+      alert("Correct!");
+      setScore(score + 1);
+    } else {
+      alert("try again!");
+    }
+
     const nextQuestion = currentQuestion + 1;
 
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
+    } else {
+      setShowScore(true);
     }
   }
 
   return (
     <div className="App">
-      <Answer />
+      {schowScore ? (
+        <p>
+          Well done!{" "}
+          <span className="correct">{score}/3 Questions are correct!</span>
+        </p>
+      ) : (
+        <Answer
+          handleAnswerButtonClick={handleAnswerButtonClick}
+          questions={questions}
+          currentQuestion={currentQuestion}
+        />
+      )}
     </div>
   );
 }
