@@ -1,4 +1,6 @@
 import React from "react";
+import "./Answer.css";
+import Button from "react-bootstrap/Button";
 
 const Answer = ({ handleAnswerButtonClick, questions, currentQuestion }) => {
   return (
@@ -12,13 +14,15 @@ const Answer = ({ handleAnswerButtonClick, questions, currentQuestion }) => {
         <br></br>
         {questions[currentQuestion].questionText}
       </h2>
-      <ul>
+      <ul id="btn">
         {questions[currentQuestion].answerOptions.map((answerOption, key) => (
           <li
             key={key}
             onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}
           >
-            {answerOption.answerText}
+            <Button variant="primary">
+              {answerOption.answerText}
+            </Button>
           </li>
         ))}
       </ul>
