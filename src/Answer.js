@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Answer() {
+const Answer = ({ handleAnswerButtonClick, questions, currentQuestion }) => {
   return (
     <>
       <h1>3 Choice Quiz</h1>
@@ -12,13 +12,18 @@ export default function Answer() {
         <br></br>
         {questions[currentQuestion].questionText}
       </h2>
-      {/* {questions[currentQuestion].answerOptions.map((answerOptions, key) => (
-        <li>
-          key={key}
-          onClick = {() => handleAnswerButtonClick(answerOptions.isCorrect)}
-          {answerOptions.answerText}
-        </li> */}
-      {/* ))} */}
+      <ul>
+        {questions[currentQuestion].answerOptions.map((answerOption, key) => (
+          <li
+            key={key}
+            onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}
+          >
+            {answerOption.answerText}
+          </li>
+        ))}
+      </ul>
     </>
   );
-}
+};
+
+export default Answer;
