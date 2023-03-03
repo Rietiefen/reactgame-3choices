@@ -53,19 +53,21 @@ export default function App() {
   };
 
   return (
-    <div className="App">
-      {showScore ? (
-        <p>
-          Well done!{" "}
-          <span className="correct">{score}/3 Questions are correct!</span>
-        </p>
-      ) : (
-        <Answer
-          handleAnswerButtonClick={handleAnswerButtonClick}
-          questions={questions}
-          currentQuestion={currentQuestion}
-        />
-      )}
+    <div className="container mt-5">
+      <div className="App">
+        {showScore ? (
+          <p>
+            Well done!{" "}
+            <span className="correct">{score}/3 Questions are correct!</span>
+          </p>
+        ) : (
+          <Answer
+            handleAnswerButtonClick={handleAnswerButtonClick}
+            questions={questions}
+            currentQuestion={currentQuestion}
+          />
+        )}
+      </div>
     </div>
   );
 }

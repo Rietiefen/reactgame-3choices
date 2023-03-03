@@ -8,7 +8,7 @@ const Answer = ({ handleAnswerButtonClick, questions, currentQuestion }) => {
       <h1>3 Choice Quiz</h1>
       <h2>
         <span>
-          Question
+          Question&ensp;
           {currentQuestion + 1}
         </span>
         <br></br>
@@ -20,7 +20,7 @@ const Answer = ({ handleAnswerButtonClick, questions, currentQuestion }) => {
             key={key}
             onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}
           >
-            <Button variant="primary">
+            <Button className="mt-4" variant="primary">
               {answerOption.answerText}
             </Button>
           </li>
