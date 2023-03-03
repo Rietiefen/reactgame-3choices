@@ -5,10 +5,10 @@ import Button from "react-bootstrap/Button";
 const Answer = ({ handleAnswerButtonClick, questions, currentQuestion }) => {
   return (
     <>
-      <div className="w3-container questions py-5">
+      <div className="w3-container title py-5">
         <h1>3 Choice Quiz</h1>
         <h2>
-          <span>
+          <span className="question">
             Question&nbsp;
             {currentQuestion + 1}
           </span>
